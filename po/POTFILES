@@ -1,0 +1,6 @@
+data/plasmus777.gnome.GpuOffloadingManager.desktop.in
+data/plasmus777.gnome.GpuOffloadingManager.appdata.xml.in
+data/plasmus777.gnome.GpuOffloadingManager.gschema.xml
+src/main.c
+src/gom-app-window.c
+src/gom-app-window.ui

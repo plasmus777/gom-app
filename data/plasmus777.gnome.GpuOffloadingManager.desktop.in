@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=gom-app
+Exec=gom-app
+Icon=plasmus777.gnome.GpuOffloadingManager
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true
