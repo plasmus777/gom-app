@@ -21,7 +21,7 @@
 #include "config.h"
 
 #include "gom-app-application.h"
-#include "gom-app-window.h"
+#include "ui/app/gom-app-window.h"
 
 struct _GomAppApplication
 {
@@ -82,7 +82,7 @@ gom_app_application_about_action (GSimpleAction *action,
   adw_show_about_window (window,
                          "application-name", "gom-app",
                          "application-icon", "plasmus777.gnome.GpuOffloadingManager",
-                         "developer-name", "Fernando Barbosa Ferreira Lopes",
+                         "developer-name", "Fernando B. F. Lopes",
                          "version", "0.1.0",
                          "developers", developers,
                          "copyright", "© 2022 Fernando Barbosa Ferreira Lopes",

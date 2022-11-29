@@ -1,7 +1,7 @@
 gom_app_sources = [
   'main.c',
   'gom-app-application.c',
-  'gom-app-window.c',
+  'ui/app/gom-app-window.c',
 ]
 
 gom_app_deps = [

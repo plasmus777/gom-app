@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.10.3 -->
+<interface>
+  <!-- interface-name gom-app-window.ui -->
+  <!-- interface-description An application for managing your computer's gpu offloading capabilities -->
+  <!-- interface-copyright © 2022 Fernando Barbosa Ferreira Lopes -->
+  <!-- interface-authors Fernando B. F. Lopes -->
+  <requires lib="gtk" version="4.6"/>
+  <requires lib="libadwaita" version="1.1"/>
+  <template class="GomAppWindow" parent="AdwApplicationWindow">
+    <property name="default-height">400</property>
+    <property name="default-width">500</property>
+    <property name="icon-name">plasmus777.gnome.GpuOffloadingManager</property>
+    <property name="show-menubar">True</property>
+    <property name="title">Gpu Offloading Manager</property>
+    <child>
+      <object class="GtkBox" id="box">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkHeaderBar" id="header_bar">
+            <property name="valign">start</property>
+            <child type="end">
+              <object class="GtkMenuButton" id="primary-menu">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="primary">True</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkNotebook" id="notebook">
+            <property name="page">0</property>
+            <property name="tab-pos">left</property>
+            <property name="vexpand">True</property>
+            <child>
+              <object class="GtkBox" id="sysinfo-box">
+                <property name="orientation">vertical</property>
+                <child>
+                  <object class="GtkScrolledWindow">
+                    <child>
+                      <object class="GtkTextView">
+                        <property name="hexpand">True</property>
+                        <property name="top-margin">5</property>
+                        <property name="vexpand">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="AdwButtonContent">
+                <property name="icon-name">video-display-symbolic</property>
+                <property name="label"> Display Information</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="running-box">
+                <property name="orientation">vertical</property>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="AdwButtonContent">
+                <property name="icon-name">application-x-executable-symbolic</property>
+                <property name="label"> Running Applications</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="profiles-box">
+                <property name="orientation">vertical</property>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="AdwButtonContent">
+                <property name="icon-name">org.gnome.Settings-applications-symbolic</property>
+                <property name="label"> Application Profiles</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="gpu-box">
+                <property name="orientation">vertical</property>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="AdwButtonContent">
+                <property name="icon-name">application-x-firmware-symbolic</property>
+                <property name="label"> GPU Settings</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="settings-box">
+                <property name="orientation">vertical</property>
+              </object>
+            </child>
+            <child type="tab">
+              <object class="AdwButtonContent">
+                <property name="icon-name">applications-system-symbolic</property>
+                <property name="label"> Settings</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

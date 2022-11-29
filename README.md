@@ -1,8 +1,5 @@
-# gpu-offloading-manager
-
-
-Gnome GPU Offloading Manager
-
+# GPU Offloading Manager
+1
 An application for gnome using GTK4 that allows the user to control and manage their "discrete gpu" through prime-offloading in a simple way.
 
 Modern linux GPU drivers support prime-offloading, but there is no user interface to interact with them. The objective behind this project is to change that.

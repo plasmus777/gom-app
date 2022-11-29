@@ -38,7 +38,7 @@ gom_app_window_class_init (GomAppWindowClass *klass)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/plasmus777/gnome/GpuOffloadingManager/gom-app-window.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/plasmus777/gnome/GpuOffloadingManager/ui/app/gom-app-window.ui");
   gtk_widget_class_bind_template_child (widget_class, GomAppWindow, header_bar);
   gtk_widget_class_bind_template_child (widget_class, GomAppWindow, label);
 }

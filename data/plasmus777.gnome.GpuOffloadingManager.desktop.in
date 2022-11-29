@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=gom-app
+Name=Gpu Offloading Manager
 Exec=gom-app
 Icon=plasmus777.gnome.GpuOffloadingManager
 Terminal=false
