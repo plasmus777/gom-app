@@ -5,7 +5,7 @@ An application for linux using GTK4 for managing application profiles under hybr
 Linux based systems have always had issues and lack of support regarding computers with multiple video cards.
 In the recent years however, GPU manufacturers managed to improve quite a bit in the driver department, implementing several lacking features that improved the GPU offloading situation.
 One of the few things that still did not improve is *application profile selection* - launching a program using a more/less capable GPU automatically/manually.
-**GPU Offloading Manager aims to implement an _user interface to  configure and launch programs automatically using a determined GPU under hybrid systems._ **
+**GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically using a determined GPU under hybrid systems._**
 
 #### TODO:
 - [ ] UI Implementation
