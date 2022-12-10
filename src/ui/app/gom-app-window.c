@@ -24,27 +24,37 @@
 
 struct _GomAppWindow
 {
-  AdwApplicationWindow  parent_instance;
+  AdwApplicationWindow parent_instance;
 
   /* Template widgets */
-  GtkHeaderBar        *header_bar;
-  GtkLabel            *label;
+  GtkBox  *box;
+
 };
 
 G_DEFINE_FINAL_TYPE (GomAppWindow, gom_app_window, ADW_TYPE_APPLICATION_WINDOW)
+
+static void
+gom_app_window_dispose (GObject *gobject)
+{
+  gtk_widget_dispose_template (GTK_WIDGET (gobject), ADW_TYPE_APPLICATION_WINDOW);
+
+  G_OBJECT_CLASS (gom_app_window_parent_class)->dispose (gobject);
+}
 
 static void
 gom_app_window_class_init (GomAppWindowClass *klass)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
 
+  G_OBJECT_CLASS (klass)->dispose = gom_app_window_dispose;
+
   gtk_widget_class_set_template_from_resource (widget_class, "/plasmus777/gnome/GpuOffloadingManager/ui/app/gom-app-window.ui");
-  gtk_widget_class_bind_template_child (widget_class, GomAppWindow, header_bar);
-  gtk_widget_class_bind_template_child (widget_class, GomAppWindow, label);
+  gtk_widget_class_bind_template_child (widget_class, GomAppWindow, box);
 }
 
 static void
 gom_app_window_init (GomAppWindow *self)
 {
   gtk_widget_init_template (GTK_WIDGET (self));
+  //self->box;
 }

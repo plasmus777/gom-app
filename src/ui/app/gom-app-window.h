@@ -29,3 +29,4 @@ G_BEGIN_DECLS
 G_DECLARE_FINAL_TYPE (GomAppWindow, gom_app_window, GOM_APP, WINDOW, AdwApplicationWindow)
 
 G_END_DECLS
+

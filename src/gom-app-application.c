@@ -104,6 +104,8 @@ gom_app_application_quit_action (GSimpleAction *action,
 static const GActionEntry app_actions[] = {
   { "quit", gom_app_application_quit_action },
   { "about", gom_app_application_about_action },
+  { "shortcuts", gom_app_application_about_action },
+  { "preferences", gom_app_application_about_action },
 };
 
 static void
