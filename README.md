@@ -1,5 +1,5 @@
 # GPU Offloading Manager
-An application for linux using GTK4 for managing application profiles under hybrid graphics (laptops/computer with multiple  GPUs).
+An application for linux using GTK4 for managing application profiles under hybrid graphics (laptops/computers with multiple  GPUs).
 
 ## Why would I want this?
 Linux based systems have always had issues and lack of support regarding computers with multiple video cards.
