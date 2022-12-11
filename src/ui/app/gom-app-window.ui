@@ -72,6 +72,26 @@
             <property name="transition-type">slide-left-right</property>
             <property name="vexpand">True</property>
             <child>
+              <object class="GtkStackPage" id="running-stack">
+                <property name="child">
+                  <object class="GtkListBox"/>
+                </property>
+                <property name="icon-name">application-x-executable-symbolic</property>
+                <property name="name">running-stack</property>
+                <property name="title"> Running Applications</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage" id="profiles-stack">
+                <property name="child">
+                  <object class="GtkCenterBox"/>
+                </property>
+                <property name="icon-name">view-grid-symbolic</property>
+                <property name="name">profiles-stack</property>
+                <property name="title">Application Profiles</property>
+              </object>
+            </child>
+            <child>
               <object class="GtkStackPage" id="display-stack">
                 <property name="child">
                   <object class="GtkScrolledWindow">
@@ -331,26 +351,6 @@
                 <property name="icon-name">video-display-symbolic</property>
                 <property name="name">display-stack</property>
                 <property name="title"> Display Information</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkStackPage" id="profiles-stack">
-                <property name="child">
-                  <object class="GtkCenterBox"/>
-                </property>
-                <property name="icon-name">view-grid-symbolic</property>
-                <property name="name">profiles-stack</property>
-                <property name="title">Application Profiles</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkStackPage" id="running-stack">
-                <property name="child">
-                  <object class="GtkListBox"/>
-                </property>
-                <property name="icon-name">application-x-executable-symbolic</property>
-                <property name="name">running-stack</property>
-                <property name="title"> Running Applications</property>
               </object>
             </child>
           </object>

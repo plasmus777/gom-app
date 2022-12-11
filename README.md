@@ -8,23 +8,10 @@ One of the few things that still did not improve is *application profile selecti
 **GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically under hybrid systems._**
 
 #### TODO:
-- [ ] UI Implementation
-    - [X] GTK Window
-    - [X] Primary Menu
-        - [ ] Preferences Submenu
-            - [ ] Application Preferences
-            - [ ] Integrated GPU Preferences
-            - [ ] Discrete GPU Preferences
-        - [ ] Keyboard Shortcuts Submenu
-        - [ ] Help Submenu
-        - [ ] About Submenu
-    - [ ] Interactive Panels
-        - [X] Basic Display Information Panel
-        - [ ] Application Profiles Panel
-        - [ ] Running Applications (using GOM)
-    
-- [ ] Code Implementation for all of the above
-    
+- [ ] UI Design
+
+- [ ] Code Implementation
+
 - [ ] Driver support
 	- [ ] Open-source
 		- [ ] Nouveau
