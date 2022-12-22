@@ -1,7 +1,7 @@
 {
     "app-id" : "plasmus777.gnome.GpuOffloadingManager",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "43",
+    "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
     "command" : "gom-app",
     "finish-args" : [
@@ -34,8 +34,5 @@
                 }
             ]
         }
-    ],
-    "build-options" : {
-        "env" : {        }
-    }
+    ]
 }
