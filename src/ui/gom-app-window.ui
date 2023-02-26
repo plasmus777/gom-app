@@ -338,25 +338,6 @@
                             <property name="vexpand">True</property>
                           </object>
                         </child>
-                        <child>
-                          <object class="GtkActionBar">
-                            <property name="hexpand">True</property>
-                            <child>
-                              <object class="GtkButton">
-                                <property name="halign">center</property>
-                                <property name="has-tooltip">True</property>
-                                <property name="icon-name">folder-open-symbolic</property>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkButton">
-                                <property name="halign">center</property>
-                                <property name="has-tooltip">True</property>
-                                <property name="icon-name">media-floppy-symbolic</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
                       </object>
                     </property>
                     <property name="icon-name">view-grid-symbolic</property>
