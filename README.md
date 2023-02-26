@@ -1,5 +1,4 @@
 # GPU Offloading Manager
-A linux application to configure applications and hybrid graphics on linux
 
 ### **GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically under hybrid systems._**
 
