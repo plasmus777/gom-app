@@ -26,6 +26,6 @@ One of the few things that still did not improve is *application profile selecti
 
 ### Extra notes
 - This application is NOT a driver/switcher utility (like prime-select or others). What is does is simply allow the user to select the default graphic card for installed applications under systems with hydrid graphics.
-- The application expects your system to already have your drivers configured. Follow your distribution documentation before using Gpu Offloading Manager.
+- The application expects your system to already have your drivers configured. Follow your distribution's documentation before using Gpu Offloading Manager.
 
 <sub>Reminder: This project is mostly a hobby, and as such, no updates/features are a given. I'll try my best to update the project and make sure that it works, but no compromises.</sub>
