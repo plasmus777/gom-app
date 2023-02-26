@@ -23,10 +23,9 @@ import gi
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
-from gi.repository import Gtk, Gio, Adw
-from .window import GomAppWindow
-
+from .window import *
 from .handler_action import *
+from .config import *
 
 class GomAppApplication(Adw.Application):
     """The main application singleton class."""
@@ -52,9 +51,13 @@ class GomAppApplication(Adw.Application):
     def __init__(self):
         super().__init__(application_id='plasmus777.gnome.GpuOffloadingManager',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
+
         create_action(self, 'quit', self.quit, ['<primary>q'])
         create_action(self, 'about', self.on_about_action)
         create_action(self, 'preferences', self.on_preferences_action)
+
+        c = Config()
+        c.initialize()
 
     def do_activate(self):
         """Called when the application is activated.

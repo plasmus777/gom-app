@@ -30,8 +30,8 @@ gom_app_sources = [
   'main.py',
   'window.py',
   'notify.py',
-  'handler_gpu.py',
   'handler_action.py',
+  'config.py'
 ]
 
 install_data(gom_app_sources, install_dir: moduledir)

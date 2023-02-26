@@ -19,10 +19,24 @@
 
 from gi.repository import Adw, Gtk, Gio
 
+from .handler_action import *
+
 @Gtk.Template(resource_path='/plasmus777/gnome/GpuOffloadingManager/ui/gom-app-window.ui')
 class GomAppWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GomAppWindow'
-    #button_about = Gtk.Template.Child()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        menu_toggle = Gtk.Template.Child('menu_toggle')
+        menu_revealer = Gtk.Template.Child('menu_revealer')
+
+        create_action(self, 'toggled', self.toggle_menu)
+
+    def toggle_menu(self):
+        if menu_revealer.reveal_child:
+            menu_revealer.reveal_child = false
+            print('The menu was hidden.')
+        else:
+            menu_revealer.reveal_child = true
+            print('The menu was shown.')
