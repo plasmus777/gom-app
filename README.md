@@ -1,7 +1,7 @@
 # GPU Offloading Manager
 A linux application to configure applications and hybrid graphics on linux
 
-###**GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically under hybrid systems._**
+### **GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically under hybrid systems._**
 
 ### Objective
 Linux based systems have always had issues and lack of support regarding computers with multiple video cards.
@@ -24,7 +24,7 @@ One of the few things that still did not improve is *application profile selecti
     - [ ] Flatpak support
     - [ ] Snap support
 
-###Extra notes
+### Extra notes
 - This application is NOT a driver/switcher utility (like prime-select or others). What is does is simply allow the user to select the default graphic card for installed applications under systems with hydrid graphics.
 - The application expects your system to already have your drivers configured. Follow your distribution documentation before using Gpu Offloading Manager.
 
