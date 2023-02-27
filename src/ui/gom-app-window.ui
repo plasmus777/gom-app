@@ -31,26 +31,14 @@
         </child>
         <child>
           <object class="GtkFlowBox">
-            <property name="halign">baseline</property>
             <property name="hexpand">True</property>
             <property name="max-children-per-line">2</property>
             <property name="min-children-per-line">2</property>
             <property name="vexpand">True</property>
             <child>
-              <object class="GtkRevealer" id="menu_revealer">
-                <property name="child">switcher</property>
-                <property name="halign">baseline</property>
-                <property name="reveal-child">True</property>
+              <object class="GtkStackSidebar" id="stack_sidebar">
+                <property name="stack">stack</property>
                 <property name="vexpand">True</property>
-                <child>
-                  <object class="GtkStackSwitcher" id="switcher">
-                    <property name="halign">baseline</property>
-                    <property name="hexpand">True</property>
-                    <property name="orientation">vertical</property>
-                    <property name="stack">stack</property>
-                    <property name="vexpand">True</property>
-                  </object>
-                </child>
               </object>
             </child>
             <child>
@@ -250,8 +238,7 @@
                         </child>
                       </object>
                     </property>
-                    <property name="icon-name">application-x-executable-symbolic</property>
-                    <property name="name">running-stack</property>
+                    <property name="name">running_stack</property>
                     <property name="title"> Running Applications</property>
                   </object>
                 </child>
@@ -340,8 +327,7 @@
                         </child>
                       </object>
                     </property>
-                    <property name="icon-name">view-grid-symbolic</property>
-                    <property name="name">profiles-stack</property>
+                    <property name="name">profiles_stack</property>
                     <property name="title">Application Profiles</property>
                   </object>
                 </child>
@@ -621,9 +607,21 @@
                         </child>
                       </object>
                     </property>
-                    <property name="icon-name">video-display-symbolic</property>
-                    <property name="name">display-stack</property>
+                    <property name="name">display_stack</property>
                     <property name="title"> Display Information</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage" id="settings_stack">
+                    <property name="child">
+                      <object class="GtkScrolledWindow">
+                        <property name="has-frame">True</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                      </object>
+                    </property>
+                    <property name="name">settings_stack</property>
+                    <property name="title">Settings</property>
                   </object>
                 </child>
               </object>
