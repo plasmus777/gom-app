@@ -1,4 +1,5 @@
 # GPU Offloading Manager
+# ![plasmus777 gnome GpuOffloadingManager](https://user-images.githubusercontent.com/118869201/221449922-9f5ba67d-7c34-40e4-b40a-cce493f6c95e.svg)
 
 ### **GPU Offloading Manager aims to implement an _user interface to configure and launch programs automatically under hybrid systems._**
 
