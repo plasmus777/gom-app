@@ -10,7 +10,9 @@
         "--socket=fallback-x11",
         "--device=dri",
         "--socket=wayland",
-        "--filesystem=xdg-config",
+        "--filesystem=xdg-config/<config-dir>:create",
+    	"--filesystem=xdg-cache/<cache-dir>:create",
+    	"--filesystem=xdg-data/<data-dir>:create",
         "--socket=session-bus"
     ],
     "cleanup" : [

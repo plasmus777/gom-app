@@ -22,345 +22,474 @@
         <property name="vexpand">True</property>
         <child>
           <object class="GtkHeaderBar" id="header_bar">
-            <child type="start">
-              <object class="GtkToggleButton" id="menu_toggle">
-                <property name="icon-name">sidebar-show-symbolic</property>
+            <child type="title">
+              <object class="GtkStackSwitcher">
+                <property name="stack">stack</property>
               </object>
             </child>
           </object>
         </child>
         <child>
-          <object class="GtkFlowBox">
+          <object class="GtkStack" id="stack">
             <property name="hexpand">True</property>
-            <property name="max-children-per-line">2</property>
-            <property name="min-children-per-line">2</property>
+            <property name="hhomogeneous">False</property>
+            <property name="transition-type">slide-left-right</property>
             <property name="vexpand">True</property>
+            <property name="vhomogeneous">False</property>
             <child>
-              <object class="GtkStackSidebar" id="stack_sidebar">
-                <property name="stack">stack</property>
-                <property name="vexpand">True</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkStack" id="stack">
-                <property name="hexpand">True</property>
-                <property name="transition-type">slide-up-down</property>
-                <property name="vexpand">True</property>
-                <child>
-                  <object class="GtkStackPage" id="running_stack">
-                    <property name="accessible-role">section</property>
-                    <property name="child">
-                      <object class="GtkBox">
-                        <property name="hexpand">True</property>
-                        <property name="orientation">vertical</property>
-                        <property name="vexpand">True</property>
-                        <child>
-                          <object class="GtkScrolledWindow">
-                            <property name="has-frame">True</property>
-                            <property name="hexpand">True</property>
-                            <property name="vexpand">True</property>
-                            <child>
-                              <object class="GtkListBox">
-                                <property name="accessible-role">list-box</property>
-                                <property name="hexpand">True</property>
-                                <property name="selection-mode">none</property>
-                                <property name="show-separators">True</property>
-                                <property name="vexpand">True</property>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="homogeneous">True</property>
-                                        <property name="spacing">2</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">Some Application</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">pid: 9999</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">help-about-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="homogeneous">True</property>
-                                        <property name="spacing">2</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">Some Application</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">pid: 9998</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">help-about-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="accessible-role">menu-item</property>
-                                        <property name="homogeneous">True</property>
-                                        <property name="spacing">2</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">Some Application</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">pid: 9997</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">help-about-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="homogeneous">True</property>
-                                        <property name="spacing">2</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">Some Application</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">pid: 9996</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">help-about-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="homogeneous">True</property>
-                                        <property name="spacing">2</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">Some Application</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="label">pid: [...]</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">help-about-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                    </property>
-                    <property name="name">running_stack</property>
-                    <property name="title"> Running Applications</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage" id="profiles_stack">
-                    <property name="child">
-                      <object class="GtkBox">
-                        <property name="hexpand">True</property>
-                        <property name="orientation">vertical</property>
-                        <property name="vexpand">True</property>
-                        <child>
-                          <object class="GtkScrolledWindow">
-                            <property name="child">
-                              <object class="GtkListBox">
-                                <property name="hexpand">True</property>
-                                <property name="show-separators">True</property>
-                                <property name="vexpand">True</property>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <property name="accessible-role">list-item</property>
-                                    <property name="focus-on-click">False</property>
-                                    <child>
-                                      <object class="GtkBox">
-                                        <property name="hexpand">True</property>
-                                        <property name="spacing">8</property>
-                                        <property name="vexpand">True</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="halign">center</property>
-                                            <property name="hexpand">True</property>
-                                            <property name="icon-name">application-x-executable-symbolic</property>
-                                            <property name="vexpand">True</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="halign">center</property>
-                                            <property name="hexpand">True</property>
-                                            <property name="label">Some Application</property>
-                                            <property name="valign">center</property>
-                                            <property name="vexpand">True</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkLabel">
-                                            <property name="halign">center</property>
-                                            <property name="hexpand">True</property>
-                                            <property name="label">integrated</property>
-                                            <property name="valign">center</property>
-                                            <property name="vexpand">True</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">user-trash-symbolic</property>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkButton">
-                                            <property name="halign">center</property>
-                                            <property name="icon-name">document-edit-symbolic</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkListBoxRow">
-                                    <child>
-                                      <object class="GtkButton">
-                                        <property name="hexpand">True</property>
-                                        <property name="icon-name">document-new-symbolic</property>
-                                        <property name="vexpand">True</property>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </property>
-                            <property name="has-frame">True</property>
-                            <property name="hexpand">True</property>
-                            <property name="vexpand">True</property>
-                          </object>
-                        </child>
-                      </object>
-                    </property>
-                    <property name="name">profiles_stack</property>
-                    <property name="title">Application Profiles</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage" id="display_stack">
-                    <property name="child">
+              <object class="GtkStackPage" id="running_stack">
+                <property name="accessible-role">section</property>
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="hexpand">True</property>
+                    <property name="margin-bottom">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="orientation">vertical</property>
+                    <property name="vexpand">True</property>
+                    <child>
                       <object class="GtkScrolledWindow">
                         <property name="has-frame">True</property>
                         <property name="hexpand">True</property>
+                        <property name="margin-bottom">2</property>
+                        <property name="margin-end">2</property>
+                        <property name="margin-start">2</property>
+                        <property name="margin-top">2</property>
                         <property name="vexpand">True</property>
                         <child>
                           <object class="GtkListBox">
-                            <property name="activate-on-single-click">False</property>
-                            <property name="can-target">False</property>
-                            <property name="focus-on-click">False</property>
+                            <property name="accessible-role">list-box</property>
                             <property name="hexpand">True</property>
                             <property name="selection-mode">none</property>
+                            <property name="show-separators">True</property>
                             <property name="vexpand">True</property>
                             <child>
-                              <object class="GtkImage" id="icon_display_protocol">
-                                <property name="halign">center</property>
-                                <property name="hexpand">True</property>
-                                <property name="icon-name">application-x-executable-symbolic</property>
-                                <property name="pixel-size">64</property>
-                                <property name="vexpand">True</property>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="homogeneous">True</property>
+                                    <property name="spacing">2</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Some Application</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">pid: 9999</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">help-about-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                             <child>
-                              <object class="GtkLabel" id="label_display_protocol">
-                                <property name="halign">center</property>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="homogeneous">True</property>
+                                    <property name="spacing">2</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Some Application</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">pid: 9998</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">help-about-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="accessible-role">menu-item</property>
+                                    <property name="homogeneous">True</property>
+                                    <property name="spacing">2</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Some Application</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">pid: 9997</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">help-about-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="homogeneous">True</property>
+                                    <property name="spacing">2</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Some Application</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">pid: 9996</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">help-about-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="homogeneous">True</property>
+                                    <property name="spacing">2</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">Some Application</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="label">pid: [...]</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">help-about-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">system-monitor-app-symbolic</property>
+                <property name="name">running_stack</property>
+                <property name="title">Running Applications</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage" id="profiles_stack">
+                <property name="child">
+                  <object class="GtkBox">
+                    <property name="hexpand">True</property>
+                    <property name="margin-bottom">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="orientation">vertical</property>
+                    <property name="vexpand">True</property>
+                    <child>
+                      <object class="GtkScrolledWindow">
+                        <property name="child">
+                          <object class="GtkListBox">
+                            <property name="hexpand">True</property>
+                            <property name="show-separators">True</property>
+                            <property name="vexpand">True</property>
+                            <child>
+                              <object class="GtkListBoxRow">
+                                <property name="accessible-role">list-item</property>
+                                <property name="focus-on-click">False</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="hexpand">True</property>
+                                    <property name="spacing">8</property>
+                                    <property name="vexpand">True</property>
+                                    <child>
+                                      <object class="GtkImage">
+                                        <property name="halign">center</property>
+                                        <property name="hexpand">True</property>
+                                        <property name="icon-name">application-x-executable-symbolic</property>
+                                        <property name="vexpand">True</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="halign">center</property>
+                                        <property name="hexpand">True</property>
+                                        <property name="label">Some Application</property>
+                                        <property name="valign">center</property>
+                                        <property name="vexpand">True</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel">
+                                        <property name="halign">center</property>
+                                        <property name="hexpand">True</property>
+                                        <property name="label">integrated</property>
+                                        <property name="valign">center</property>
+                                        <property name="vexpand">True</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">user-trash-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton">
+                                        <property name="halign">center</property>
+                                        <property name="icon-name">document-edit-symbolic</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBoxRow">
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="hexpand">True</property>
+                                    <property name="icon-name">document-new-symbolic</property>
+                                    <property name="vexpand">True</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                        <property name="has-frame">True</property>
+                        <property name="hexpand">True</property>
+                        <property name="vexpand">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="icon-name">application-x-appliance-symbolic</property>
+                <property name="name">profiles_stack</property>
+                <property name="title">Application Profiles</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage" id="display_stack">
+                <property name="child">
+                  <object class="GtkScrolledWindow">
+                    <property name="has-frame">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="margin-bottom">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="vexpand">True</property>
+                    <child>
+                      <object class="GtkListBox">
+                        <property name="activate-on-single-click">False</property>
+                        <property name="can-target">False</property>
+                        <property name="focus-on-click">False</property>
+                        <property name="hexpand">True</property>
+                        <property name="selection-mode">none</property>
+                        <property name="vexpand">True</property>
+                        <child>
+                          <object class="GtkImage" id="icon_display_protocol">
+                            <property name="halign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="icon-name">application-x-executable-symbolic</property>
+                            <property name="pixel-size">64</property>
+                            <property name="vexpand">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel" id="label_display_protocol">
+                            <property name="halign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="label">Running on X11/Wayland</property>
+                            <property name="vexpand">True</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                            <property name="hexpand">True</property>
+                            <property name="margin-top">30</property>
+                            <property name="vexpand">True</property>
+                            <property name="visible">False</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkListBox">
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <child>
+                              <object class="GtkFrame">
                                 <property name="hexpand">True</property>
-                                <property name="label">Running on X11/Wayland</property>
+                                <property name="label">DRIVER - Integrated GPU</property>
+                                <property name="label-widget">icon_integrated</property>
+                                <property name="label-xalign">0.5</property>
                                 <property name="vexpand">True</property>
+                                <child>
+                                  <object class="GtkImage" id="icon_integrated">
+                                    <property name="icon-name">application-x-executable-symbolic</property>
+                                    <property name="pixel-size">32</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkPaned">
+                                    <property name="end-child">info_3</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="start-child">labels_3</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="wide-handle">True</property>
+                                    <child>
+                                      <object class="GtkListBox" id="labels_3">
+                                        <property name="hexpand">True</property>
+                                        <property name="selection-mode">none</property>
+                                        <property name="vexpand">True</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Vendor</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Product</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Description</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Driver</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Bus</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkListBox" id="info_3">
+                                        <property name="hexpand">True</property>
+                                        <property name="selection-mode">none</property>
+                                        <property name="show-separators">True</property>
+                                        <property name="vexpand">True</property>
+                                        <child>
+                                          <object class="GtkLabel" id="vendor-info_3">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">Loonix Video Company</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="product-info_3">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">Imagine a very weak integrated GPU model here</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="description-info_3">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">This is an imaginary GPU</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="driver-info_3">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">L.E.L. v0.00777</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="bus-info_3">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">PCI 0000:00:00.0</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                             <child>
@@ -372,229 +501,106 @@
                               </object>
                             </child>
                             <child>
-                              <object class="GtkListBox">
+                              <object class="GtkFrame">
                                 <property name="hexpand">True</property>
+                                <property name="label">DRIVER - Discrete GPU</property>
+                                <property name="label-widget">icon_discrete</property>
+                                <property name="label-xalign">0.5</property>
                                 <property name="vexpand">True</property>
                                 <child>
-                                  <object class="GtkFrame">
-                                    <property name="hexpand">True</property>
-                                    <property name="label">DRIVER - Integrated GPU</property>
-                                    <property name="label-widget">icon_integrated</property>
-                                    <property name="label-xalign">0.5</property>
-                                    <property name="vexpand">True</property>
-                                    <child>
-                                      <object class="GtkImage" id="icon_integrated">
-                                        <property name="icon-name">application-x-executable-symbolic</property>
-                                        <property name="pixel-size">32</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkPaned">
-                                        <property name="end-child">info_3</property>
-                                        <property name="hexpand">True</property>
-                                        <property name="start-child">labels_3</property>
-                                        <property name="vexpand">True</property>
-                                        <property name="wide-handle">True</property>
-                                        <child>
-                                          <object class="GtkListBox" id="labels_3">
-                                            <property name="hexpand">True</property>
-                                            <property name="selection-mode">none</property>
-                                            <property name="vexpand">True</property>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Vendor</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Product</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Description</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Driver</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Bus</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                        <child>
-                                          <object class="GtkListBox" id="info_3">
-                                            <property name="hexpand">True</property>
-                                            <property name="selection-mode">none</property>
-                                            <property name="show-separators">True</property>
-                                            <property name="vexpand">True</property>
-                                            <child>
-                                              <object class="GtkLabel" id="vendor-info_3">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">Loonix Video Company</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="product-info_3">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">Imagine a very weak integrated GPU model here</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="description-info_3">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">This is an imaginary GPU</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="driver-info_3">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">L.E.L. v0.00777</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="bus-info_3">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">PCI 0000:00:00.0</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
+                                  <object class="GtkImage" id="icon_discrete">
+                                    <property name="icon-name">application-x-executable-symbolic</property>
+                                    <property name="pixel-size">32</property>
                                   </object>
                                 </child>
                                 <child>
-                                  <object class="GtkSeparator">
+                                  <object class="GtkPaned">
+                                    <property name="end-child">info_4</property>
                                     <property name="hexpand">True</property>
-                                    <property name="margin-top">30</property>
+                                    <property name="start-child">labels_4</property>
                                     <property name="vexpand">True</property>
-                                    <property name="visible">False</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkFrame">
-                                    <property name="hexpand">True</property>
-                                    <property name="label">DRIVER - Discrete GPU</property>
-                                    <property name="label-widget">icon_discrete</property>
-                                    <property name="label-xalign">0.5</property>
-                                    <property name="vexpand">True</property>
+                                    <property name="wide-handle">True</property>
                                     <child>
-                                      <object class="GtkImage" id="icon_discrete">
-                                        <property name="icon-name">application-x-executable-symbolic</property>
-                                        <property name="pixel-size">32</property>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkPaned">
-                                        <property name="end-child">info_4</property>
+                                      <object class="GtkListBox" id="labels_4">
                                         <property name="hexpand">True</property>
-                                        <property name="start-child">labels_4</property>
+                                        <property name="selection-mode">none</property>
                                         <property name="vexpand">True</property>
-                                        <property name="wide-handle">True</property>
                                         <child>
-                                          <object class="GtkListBox" id="labels_4">
-                                            <property name="hexpand">True</property>
-                                            <property name="selection-mode">none</property>
-                                            <property name="vexpand">True</property>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Vendor</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Product</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Description</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Driver</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel">
-                                                <property name="label">Bus</property>
-                                              </object>
-                                            </child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Vendor</property>
                                           </object>
                                         </child>
                                         <child>
-                                          <object class="GtkListBox" id="info_4">
+                                          <object class="GtkLabel">
+                                            <property name="label">Product</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Description</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Driver</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="label">Bus</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkListBox" id="info_4">
+                                        <property name="hexpand">True</property>
+                                        <property name="selection-mode">none</property>
+                                        <property name="show-separators">True</property>
+                                        <property name="vexpand">True</property>
+                                        <child>
+                                          <object class="GtkLabel" id="vendor-info_4">
+                                            <property name="focusable">True</property>
                                             <property name="hexpand">True</property>
-                                            <property name="selection-mode">none</property>
-                                            <property name="show-separators">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">N.E.V. ideo - Non-Existent Vendor Corporation</property>
                                             <property name="vexpand">True</property>
-                                            <child>
-                                              <object class="GtkLabel" id="vendor-info_4">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">N.E.V. ideo - Non-Existent Vendor Corporation</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="product-info_4">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">Imagine a very powerful and cheap GPU model here</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="description-info_4">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">This is an imaginary GPU that will never be real</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="driver-info_4">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">N.E.V. v0.0001</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
-                                            <child>
-                                              <object class="GtkLabel" id="bus-info_4">
-                                                <property name="focusable">True</property>
-                                                <property name="hexpand">True</property>
-                                                <property name="justify">center</property>
-                                                <property name="label">PCI 0000:00:00.0</property>
-                                                <property name="vexpand">True</property>
-                                              </object>
-                                            </child>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="product-info_4">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">Imagine a very powerful and cheap GPU model here</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="description-info_4">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">This is an imaginary GPU that will never be real</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="driver-info_4">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">N.E.V. v0.0001</property>
+                                            <property name="vexpand">True</property>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="GtkLabel" id="bus-info_4">
+                                            <property name="focusable">True</property>
+                                            <property name="hexpand">True</property>
+                                            <property name="justify">center</property>
+                                            <property name="label">PCI 0000:00:00.0</property>
+                                            <property name="vexpand">True</property>
                                           </object>
                                         </child>
                                       </object>
@@ -606,24 +612,30 @@
                           </object>
                         </child>
                       </object>
-                    </property>
-                    <property name="name">display_stack</property>
-                    <property name="title"> Display Information</property>
+                    </child>
                   </object>
-                </child>
-                <child>
-                  <object class="GtkStackPage" id="settings_stack">
-                    <property name="child">
-                      <object class="GtkScrolledWindow">
-                        <property name="has-frame">True</property>
-                        <property name="hexpand">True</property>
-                        <property name="vexpand">True</property>
-                      </object>
-                    </property>
-                    <property name="name">settings_stack</property>
-                    <property name="title">Settings</property>
+                </property>
+                <property name="icon-name">display-symbolic</property>
+                <property name="name">display_stack</property>
+                <property name="title">Display Information</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage" id="settings_stack">
+                <property name="child">
+                  <object class="GtkScrolledWindow">
+                    <property name="has-frame">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="margin-bottom">2</property>
+                    <property name="margin-end">2</property>
+                    <property name="margin-start">2</property>
+                    <property name="margin-top">2</property>
+                    <property name="vexpand">True</property>
                   </object>
-                </child>
+                </property>
+                <property name="icon-name">settings-app-symbolic</property>
+                <property name="name">settings_stack</property>
+                <property name="title">Settings</property>
               </object>
             </child>
           </object>

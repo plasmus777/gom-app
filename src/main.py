@@ -30,6 +30,8 @@ from .config import *
 class GomAppApplication(Adw.Application):
     """The main application singleton class."""
 
+    config = Config()
+
     def on_about_action(self, widget, _):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
@@ -56,8 +58,7 @@ class GomAppApplication(Adw.Application):
         create_action(self, 'about', self.on_about_action)
         create_action(self, 'preferences', self.on_preferences_action)
 
-        c = Config()
-        c.initialize()
+        self.config.initialize()
 
     def do_activate(self):
         """Called when the application is activated.
