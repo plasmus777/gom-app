@@ -12,7 +12,7 @@ base: core22
 grade: devel
 confinement: strict
 architectures:
-  - build-on: amd64
+   - build-on: [arm64, armhf, amd64]
 compression: lzo
 source-code: https://github.com/plasmus777/gom-app/
 issues: https://github.com/plasmus777/gom-app/issues
@@ -52,7 +52,7 @@ parts:
     source: https://github.com/plasmus777/gom-app
     source-tag: '43'
     source-type: git
-    plugin: meson
+    plugin: [meson, python]
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
