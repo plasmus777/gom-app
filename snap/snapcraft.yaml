@@ -1,16 +1,18 @@
 title: Gpu Offloading Manager
-name: gom-app # you probably want to 'snapcraft register <name>'
+name: gom-app
 adopt-info: gom-app
 license: GPL-3.0+
-version: '0.1.0' # just for humans, typically '1.2+git' or '1.3.2'
+version: '0.1.0'
 summary: A simple GTK4 application for managing gpu offloading on linux
 description: |
   GPU Offloading Manager aims to implement an user interface to configure and launch programs automatically under systems with hybrid graphics.
   _Note: the application is still under development, and as such, missing functionality, bugs and crashes are to be expected._
 
-base: core22 # the base snap is the execution environment for this snap
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+base: core22
+grade: devel
+confinement: strict
+architectures:
+  - build-on: amd64
 compression: lzo
 source-code: https://github.com/plasmus777/gom-app/
 issues: https://github.com/plasmus777/gom-app/issues
@@ -31,8 +33,8 @@ plugs:
 apps:
   gom-app:
     extensions: [gnome]
-    command: usr/bin/gom-app
-    desktop: usr/share/applications/plasmus777.gnome.GpuOffloadingManager.desktop
+    command: gom-app
+    desktop: /usr/share/applications/plasmus777.gnome.GpuOffloadingManager.desktop
     common-id: plasmus777.gnome.GpuOffloadingManager.desktop
     plugs:
        - desktop
