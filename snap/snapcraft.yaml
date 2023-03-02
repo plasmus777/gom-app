@@ -52,7 +52,7 @@ parts:
     source: https://github.com/plasmus777/gom-app
     source-tag: '43'
     source-type: git
-    plugin: [meson, python]
+    plugin: meson
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
