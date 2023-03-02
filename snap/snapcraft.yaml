@@ -12,7 +12,7 @@ base: core22
 grade: devel
 confinement: strict
 architectures:
-   - build-on: [arm64, armhf, amd64]
+   - build-on: amd64
 compression: lzo
 source-code: https://github.com/plasmus777/gom-app/
 issues: https://github.com/plasmus777/gom-app/issues
