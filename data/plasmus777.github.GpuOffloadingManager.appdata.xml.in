@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>plasmus777.github.GpuOffloadingManager.desktop</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+  <content_rating type="oars-1.1" />
+  <name>
+    <p>Gpu Offloading Manager</p>
+  </name>
+	<summary>
+	  <p>A simple GTK4 application for managing gpu offloading on linux</p>
+	</summary>
+  <description>
+	  <p>GPU Offloading Manager aims to implement an user interface to configure and launch programs automatically under systems with hybrid graphics, by creating profiles for each application.</p>
+	</description>
+  <url>
+    <p>https://github.com/plasmus777/gom-app/</p>
+  </url>
+</component>

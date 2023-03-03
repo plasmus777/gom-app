@@ -1,6 +1,6 @@
 desktop_file = i18n.merge_file(
-        input: 'plasmus777.gnome.GpuOffloadingManager.desktop.in',
-       output: 'plasmus777.gnome.GpuOffloadingManager.desktop',
+        input: 'plasmus777.github.GpuOffloadingManager.desktop.in',
+       output: 'plasmus777.github.GpuOffloadingManager.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
@@ -13,8 +13,8 @@ if desktop_utils.found()
 endif
 
 appstream_file = i18n.merge_file(
-        input: 'plasmus777.gnome.GpuOffloadingManager.appdata.xml.in',
-       output: 'plasmus777.gnome.GpuOffloadingManager.appdata.xml',
+        input: 'plasmus777.github.GpuOffloadingManager.appdata.xml.in',
+       output: 'plasmus777.github.GpuOffloadingManager.appdata.xml',
        po_dir: '../po',
       install: true,
   install_dir: join_paths(get_option('datadir'), 'appdata')
@@ -25,7 +25,7 @@ if appstream_util.found()
   test('Validate appstream file', appstream_util, args: ['validate', appstream_file])
 endif
 
-install_data('plasmus777.gnome.GpuOffloadingManager.gschema.xml',
+install_data('plasmus777.github.GpuOffloadingManager.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
 

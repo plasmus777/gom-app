@@ -21,9 +21,9 @@ class Config:
 
     def update_gpu_info(self):
         if os.getenv('FLATPAK_ID'):
-            subprocess.run(f_upd, shell=True)
+            subprocess.run(self.f_upd, shell=True)
         else:
-            subprocess.run(upd, shell=True)
+            subprocess.run(self.upd, shell=True)
         print('Updated gpu information.')
 
     def load_info(self):

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="gom-app">
-	<schema id="plasmus777.gnome.GpuOffloadingManager" path="/plasmus777/gnome/GpuOffloadingManager/">
+	<schema id="plasmus777.github.GpuOffloadingManager" path="/plasmus777/github/GpuOffloadingManager/">
 	</schema>
 </schemalist>

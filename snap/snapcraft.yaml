@@ -21,8 +21,8 @@ apps:
   gom-app:
     extensions: [gnome]
     command: gom-app
-    desktop: /usr/share/applications/plasmus777.gnome.GpuOffloadingManager.desktop
-    common-id: plasmus777.gnome.GpuOffloadingManager.desktop
+    desktop: /usr/share/applications/plasmus777.github.GpuOffloadingManager.desktop
+    common-id: plasmus777.github.GpuOffloadingManager.desktop
     plugs:
        - desktop
        - desktop-launch
@@ -54,10 +54,10 @@ parts:
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
-    parse-info: [/usr/share/metainfo/plasmus777.gnome.GpuOffloadingManager.appdata.xml]
+    parse-info: [/usr/share/metainfo/plasmus777.github.GpuOffloadingManager.appdata.xml]
 
 slots:
   gom-app:
     interface: dbus
     bus: session
-    name: plasmus777.gnome.GpuOffloadingManager
+    name: plasmus777.github.GpuOffloadingManager

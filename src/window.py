@@ -21,7 +21,7 @@ from gi.repository import Adw, Gtk, Gio
 
 from .config import *
 
-@Gtk.Template(resource_path='/plasmus777/gnome/GpuOffloadingManager/ui/gom-app-window.ui')
+@Gtk.Template(resource_path='/plasmus777/github/GpuOffloadingManager/ui/gom-app-window.ui')
 class GomAppWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GomAppWindow'
 
