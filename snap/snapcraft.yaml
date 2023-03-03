@@ -10,7 +10,7 @@ source-code: https://github.com/plasmus777/gom-app/
 issues: https://github.com/plasmus777/gom-app/issues
 license: GPL-3.0+
 
-base: core20
+base: core22
 grade: devel
 confinement: strict
 architectures:
