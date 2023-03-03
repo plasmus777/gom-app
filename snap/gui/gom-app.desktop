@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Gpu Offloading Manager
 Exec=gom-app
-Icon=${SNAP}/meta/gui/plasmus777.github.GpuOffloadingManager.svg
+Icon=${SNAP}/meta/gui/gom-app.svg
 Terminal=false
 Type=Application
 Categories=GTK;

@@ -1,5 +1,4 @@
 title: Gpu Offloading Manager
-icon: snap/gui/plasmus777.github.GpuOffloadingManager.svg
 name: gom-app
 adopt-info: gom-app
 version: '0.1.0'
@@ -22,8 +21,6 @@ apps:
   gom-app:
     extensions: [gnome]
     command: desktop-launch $SNAP/usr/bin/gom-app
-    desktop: usr/local/share/applications/plasmus777.github.GpuOffloadingManager.desktop
-    common-id: plasmus777.github.GpuOffloadingManager.desktop
     plugs:
        - desktop
        - desktop-launch
