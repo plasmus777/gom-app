@@ -54,7 +54,7 @@ parts:
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
-    parse-info: [/usr/share/metainfo/plasmus777.github.GpuOffloadingManager.appdata.xml]
+    parse-info: [share/appdata/plasmus777.github.GpuOffloadingManager.appdata.xml]
 
 slots:
   gom-app:
