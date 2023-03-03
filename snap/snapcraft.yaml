@@ -18,25 +18,10 @@ architectures:
    - i386
 compression: lzo
 
-plugs:
-   $HOME/.config/gom-app:
-      interface: personal-files
-      read: $HOME/.config/gom-app
-      write: $HOME/.config/gom-app
-   $HOME/.local/share/applications:
-      interface: personal-files
-      read: $HOME/.local/share/applications
-      write: $HOME/.local/share/applications
-   /usr/share/applications:
-      interface: system-files
-      read: /usr/share/applications
-
 apps:
   gom-app:
     extensions: [gnome]
     command: gom-app
-    environment:
-      PYTHONPATH: $SNAP/usr/lib/python3/site-packages:$SNAP/usr/lib/python3/dist-packages:$PYTHONPATH
     desktop: /usr/share/applications/plasmus777.gnome.GpuOffloadingManager.desktop
     common-id: plasmus777.gnome.GpuOffloadingManager.desktop
     plugs:
@@ -49,6 +34,18 @@ apps:
        - $HOME/.local/share/applications
        - /usr/share/applications
 
+plugs:
+   $HOME/.config/gom-app:
+      interface: personal-files
+      read: $HOME/.config/gom-app
+      write: $HOME/.config/gom-app
+   $HOME/.local/share/applications:
+      interface: personal-files
+      read: $HOME/.local/share/applications
+      write: $HOME/.local/share/applications
+   /usr/share/applications:
+      interface: system-files
+      read: /usr/share/applications
 
 parts:
   gom-app:
