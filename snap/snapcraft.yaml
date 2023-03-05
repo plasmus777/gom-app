@@ -21,7 +21,7 @@ apps:
   gom-app:
     extensions: [gnome]
     command: desktop-launch $SNAP/usr/bin/gom-app
-    desktop: ${SNAP}/meta/gui/gom-app.desktop
+    desktop: ${SNAP}/meta/share/applications/gom-app.desktop
     common-id: gom-app.desktop
     plugs:
        - desktop
