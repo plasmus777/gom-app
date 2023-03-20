@@ -21,7 +21,7 @@ apps:
   gom-app:
     extensions: [gnome]
     command: usr/bin/gom-app
-    desktop: usr/share/applications/gom-app.desktop
+    desktop: usr/share/applications/com.github.plasmus777.GpuOffloadingManager.desktop
     common-id: gom-app.desktop
     plugs:
        - desktop
