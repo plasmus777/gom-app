@@ -20,8 +20,8 @@ compression: lzo
 apps:
   gom-app:
     extensions: [gnome]
-    command: desktop-launch $SNAP/usr/bin/gom-app
-    desktop: ${SNAP}/meta/share/applications/gom-app.desktop
+    command: /usr/bin/gom-app
+    desktop: /usr/share/applications/gom-app.desktop
     common-id: gom-app.desktop
     plugs:
        - desktop
@@ -50,13 +50,16 @@ parts:
     source: https://github.com/plasmus777/gom-app
     source-type: git
     plugin: meson
+    build-packages:
+      - meson
+      - ninja
     meson-parameters:
-      - --prefix=/snap/gom-app/current/usr
+      - --prefix=/usr
       - --buildtype=release
-    parse-info: [usr/share/appdata/plasmus777.github.GpuOffloadingManager.appdata.xml]
+    parse-info: [usr/share/appdata/com.github.plasmus777.GpuOffloadingManager.appdata.xml]
 
 slots:
   gom-app:
     interface: dbus
     bus: session
-    name: plasmus777.github.GpuOffloadingManager
+    name: com.github.plasmus777.GpuOffloadingManager

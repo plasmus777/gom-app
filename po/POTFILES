@@ -1,6 +1,6 @@
-data/plasmus777.github.GpuOffloadingManager.desktop.in
-data/plasmus777.github.GpuOffloadingManager.appdata.xml.in
-data/plasmus777.github.GpuOffloadingManager.gschema.xml
+data/com.github.plasmus777.GpuOffloadingManager.desktop.in
+data/com.github.plasmus777.GpuOffloadingManager.appdata.xml.in
+data/com.github.plasmus777.GpuOffloadingManager.gschema.xml
 src/main.py
 src/window.py
 src/window.ui

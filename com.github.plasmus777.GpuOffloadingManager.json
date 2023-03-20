@@ -1,5 +1,5 @@
 {
-    "app-id" : "plasmus777.github.GpuOffloadingManager",
+    "app-id" : "com.github.plasmus777.GpuOffloadingManager",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",

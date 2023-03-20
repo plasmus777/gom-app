@@ -36,7 +36,7 @@ class GomAppApplication(Adw.Application):
         """Callback for the app.about action."""
         about = Adw.AboutWindow(transient_for=self.props.active_window,
                                 application_name='Gpu Offloading Manager',
-                                application_icon='plasmus777.github.GpuOffloadingManager',
+                                application_icon='com.github.plasmus777.GpuOffloadingManager',
                                 developer_name='Fernando Lopes',
                                 copyright='© 2022 Fernando B. F. Lopes',
                                 website='https://github.com/plasmus777/gom-app',
@@ -51,7 +51,7 @@ class GomAppApplication(Adw.Application):
         print('app.preferences action activated')
 
     def __init__(self):
-        super().__init__(application_id='plasmus777.github.GpuOffloadingManager',
+        super().__init__(application_id='com.github.plasmus777.GpuOffloadingManager',
                          flags=Gio.ApplicationFlags.FLAGS_NONE)
 
         create_action(self, 'quit', self.quit, ['<primary>q'])

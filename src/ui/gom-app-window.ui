@@ -10,10 +10,10 @@
   <template class="GomAppWindow" parent="AdwApplicationWindow">
     <property name="default-height">400</property>
     <property name="default-width">500</property>
-    <property name="icon-name">plasmus777.gnome.GpuOffloadingManager</property>
+    <property name="icon-name">com.github.plasmus777.GpuOffloadingManager</property>
     <property name="name">Gpu Offloading Manager</property>
     <property name="show-menubar">True</property>
-    <property name="startup-id">plasmus777.gnome.GpuOffloadingManager</property>
+    <property name="startup-id">com.github.plasmus777.GpuOffloadingManager</property>
     <property name="title">Gpu Offloading Manager</property>
     <child>
       <object class="GtkBox">

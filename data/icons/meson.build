@@ -1,4 +1,4 @@
-application_id = 'plasmus777.github.GpuOffloadingManager'
+application_id = 'com.github.plasmus777.GpuOffloadingManager'
 
 scalable_dir = join_paths('hicolor', 'scalable', 'apps')
 install_data(
