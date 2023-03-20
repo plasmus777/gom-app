@@ -20,8 +20,8 @@ compression: lzo
 apps:
   gom-app:
     extensions: [gnome]
-    command: /usr/bin/gom-app
-    desktop: /usr/share/applications/gom-app.desktop
+    command: usr/bin/gom-app
+    desktop: usr/share/applications/gom-app.desktop
     common-id: gom-app.desktop
     plugs:
        - desktop
@@ -30,7 +30,7 @@ apps:
        - system-observe
        - $HOME/.config/gom-app
        - $HOME/.local/share/applications
-       - /usr/share/applications
+       - usr/share/applications
 
 plugs:
    $HOME/.config/gom-app:
@@ -43,16 +43,13 @@ plugs:
       write: $HOME/.local/share/applications
    /usr/share/applications:
       interface: system-files
-      read: /usr/share/applications
+      read: usr/share/applications
 
 parts:
   gom-app:
-    source: https://github.com/plasmus777/gom-app
+    source: https://github.com/plasmus777/gom-app.git
     source-type: git
     plugin: meson
-    build-packages:
-      - meson
-      - ninja
     meson-parameters:
       - --prefix=/usr
       - --buildtype=release
