@@ -19,22 +19,18 @@ architectures:
 compression: lzo
 
 plugs:
-   gom-app-config:
    user-applications-override:
       interface: personal-files
-      read: |
-         - $HOME/.local/share/applications
-      write: |
-         - $HOME/.local/share/applications
+      read: [$HOME/.local/share/applications]
+      write: [$HOME/.local/share/applications]
    system-applications:
       interface: system-files
-      read: |
-         - /usr/share/applications
+      read: [/usr/share/applications]
 
 apps:
   gom-app:
     extensions: [gnome]
-    command: /usr/bin/gom-app
+    command: usr/bin/gom-app
     desktop: usr/share/applications/com.github.plasmus777.GpuOffloadingManager.desktop
     common-id: gom-app
     plugs:
