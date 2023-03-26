@@ -1,7 +1,7 @@
 {
     "app-id" : "com.github.plasmus777.GpuOffloadingManager",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "43",
     "sdk" : "org.gnome.Sdk",
     "command" : "gom-app",
     "finish-args" : [
@@ -11,8 +11,8 @@
         "--device=dri",
         "--socket=wayland",
         "--filesystem=xdg-config/<config-dir>:create",
-        "--filesystem=xdg-cache/<cache-dir>:create",
-        "--filesystem=xdg-data/<data-dir>:create",
+    	"--filesystem=xdg-cache/<cache-dir>:create",
+    	"--filesystem=xdg-data/<data-dir>:create",
         "--socket=session-bus"
     ],
     "cleanup" : [

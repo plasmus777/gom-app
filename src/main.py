@@ -58,8 +58,6 @@ class GomAppApplication(Adw.Application):
         create_action(self, 'about', self.on_about_action)
         create_action(self, 'preferences', self.on_preferences_action)
 
-        self.config.initialize()
-
     def do_activate(self):
         """Called when the application is activated.
 
@@ -70,6 +68,8 @@ class GomAppApplication(Adw.Application):
         if not win:
             win = GomAppWindow(application=self)
         win.present()
+
+        self.config.initialize()
 
 def main(version):
     """The application's entry point."""

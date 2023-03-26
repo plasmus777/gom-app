@@ -1,6 +1,11 @@
-
+from gi.repository import Gio
 
 class Notify:
-    def sent_notification(type, title, text, icon, action1, action2, action3):
+    def send_notification(text):
+        gom = Gio.Application.get_default()
+
+        ntf = Gio.Notification.new('GPU Offloading Manager')
+        ntf.set_body(text)
         
-        print(title + ': ' + text)
+        gom.send_notification(None, ntf)
+        print('GPU Offloading Manager: ' + text)

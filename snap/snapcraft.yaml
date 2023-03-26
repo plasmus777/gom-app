@@ -7,6 +7,7 @@ description: |
   GPU Offloading Manager aims to implement an user interface to configure and launch programs automatically under systems with hybrid graphics.
   _Note: the application is still under development, and as such, missing functionality, bugs and crashes are to be expected._
 source-code: https://github.com/plasmus777/gom-app/
+website: https://github.com/plasmus777
 issues: https://github.com/plasmus777/gom-app/issues
 license: GPL-3.0+
 
@@ -17,33 +18,37 @@ architectures:
    - amd64
 compression: lzo
 
+plugs:
+   gom-app-config:
+   user-applications-override:
+      interface: personal-files
+      read: |
+         - $HOME/.local/share/applications
+      write: |
+         - $HOME/.local/share/applications
+   system-applications:
+      interface: system-files
+      read: |
+         - /usr/share/applications
+
 apps:
   gom-app:
     extensions: [gnome]
-    command: usr/bin/gom-app
+    command: /usr/bin/gom-app
     desktop: usr/share/applications/com.github.plasmus777.GpuOffloadingManager.desktop
-    common-id: gom-app.desktop
+    common-id: gom-app
     plugs:
        - desktop
+       - desktop-legacy
+       - wayland
+       - x11
+       - gsettings
        - network
-       - polkit
+       - personal-files
+       - system-files
        - system-observe
-       - $HOME/.config/gom-app
-       - $HOME/.local/share/applications
-       - usr/share/applications
-
-plugs:
-   $HOME/.config/gom-app:
-      interface: personal-files
-      read: $HOME/.config/gom-app
-      write: $HOME/.config/gom-app
-   $HOME/.local/share/applications:
-      interface: personal-files
-      read: $HOME/.local/share/applications
-      write: $HOME/.local/share/applications
-   /usr/share/applications:
-      interface: system-files
-      read: usr/share/applications
+       - user-applications-override
+       - system-applications
 
 parts:
   gom-app:
